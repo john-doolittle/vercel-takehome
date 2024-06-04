@@ -38,7 +38,7 @@ export default function Footer() {
             href="https://github.com/vercel/next.js"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">github</p>
+            <p className="ml-2 h-7">next.js github</p>
           </a>
         </li>
         <li>
@@ -49,7 +49,7 @@ export default function Footer() {
             href="https://vercel.com/templates/next.js/portfolio-starter-kit"
           >
             <ArrowIcon />
-            <p className="ml-2 h-7">view source</p>
+            <p className="ml-2 h-7">source template</p>
           </a>
         </li>
       </ul>

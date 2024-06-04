@@ -4,14 +4,12 @@ export default function Page() {
   return (
     <section>
       <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
+        Vercel Senior Customer Success Engineer, West Take Home Exercise
       </h1>
       <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
+        {`Hi! 👋 I'm John Doolittle. Thanks for allowing me to interview
+         for the Sr. Customer Success Engineer, West position.
+         Click the link below to see my answers to the questions.`}
       </p>
       <div className="my-8">
         <BlogPosts />

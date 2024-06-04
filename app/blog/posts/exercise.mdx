@@ -1,0 +1,106 @@
+---
+title: 'The Exercise'
+publishedAt: '2024-06-03'
+---
+
+Here are the answers to your questions:
+
+## From this list, rank your 5 most favourite and 5 least favourite support tasks. Provide a brief explanation for each.
+
+✅  Favorites:
+1. Respond to 25+ support requests via email every day
+
+-- [ The bread and butter of any support team! Responding to our clients. 🙂 ]
+
+2. Work with the product team to develop a new feature based on feedback from customers
+
+-- [ As the job title implies, we are here to ensure the success of our customers, and part of that duty entails listening to thier feedback. I'm all for cross-team collaboration, and I'll jump at any chance to scratch my creative itch! ]
+
+3. Help train and onboard new support teammates
+
+-- [ I consider myself a people person and enjoy mentoring new teammates. ]
+
+4. Identify, file (and, where possible, resolve) bugs in private and public Vercel/Next.js repos on GitHub
+
+-- [ The developer in me is always happy to contribute to a code base, and identifying bugs is something I do often in my current role. ]
+
+5. Write and maintain support articles and docs pages
+
+-- [ I've always enjoyed writing, and the more refined our documentation and knowledge base is, the more educated our customers will become. An educated customer base usually means less support tickets! ]
+
+❌  Least Favorites:
+1. Help resolve billing issues for customers
+
+-- [ At my current company, billing issues are handled by the Customer Success Management team, and not the Customer Success Engineers. My passion is in resolving technical issues, and not so much payment discrepancies! ]
+
+2. Respond to queries on Twitter, Reddit, Hacker News and other 3rd party sites
+
+-- [ I prefer to keep technical communication in a centralized location (ticketing system) so that it can be easily found and referenced later. ]
+
+3. Analyze hundreds of support tickets to spot trends the product team can use
+
+-- [ Analyzing ticket trends strikes me as more of a manager's duty than an engineer's, though I can definitely see the value in doing this. ]
+
+4. Dig through logs to troubleshoot a customer's broken project
+
+-- [ Are logs useful for getting to the bottom of complicated issues? Of course they are! Can they also sometimes be illegible walls of text? Absolutely! ]
+
+5. Work with engineering teams during incidents and provide updates to internal and external stakeholders
+
+-- [ I put this here simply because incidents are no fun for anyone - neither us, nor the engineers, nor our customers and stakeholders. ]
+
+<br />
+
+## What do you want to learn or do more of at work?
+
+This might sound a little cheesy, but I would love to learn the ins and outs of Next.js and get involved with the engineering and product teams wherever possible. In my experience with Next.js thus far, it seems like an incredibly powerful framework that solves the majority of the issues with vanilla React. I also want to strengthen my JavaScript capabilities and familiarize myself with TypeScript, which I'm finding that several of the pre-built Next.js templates use.
+
+<br />
+
+## Describe how you solved a challenge or technical issue that you faced in a previous role (preferably in a previous support role). How did you determine that your solution was successful?
+
+I'll use an example from a ticket that I worked last month with the one of Tealium's clients, Uber. They were attempting to configure a Meta Pixel on uber.com through Tealium's client-side tag marketplace, and they were specifically interested in using the tag's advanced matching feature, which sends hashed customer information along with standard Meta Pixel events to increase the number of conversions attributed to specific ads. They specifically wanted to send two parameters through Meta's advanced matching feature and mapped those parameters through Tealium, yet they were also seeing some additional, unwanted advanced matching parameters being sent as well. Unsure of how these parameters were being added to their events, this presented a liability concern for Uber, and they needed our assistance discerning where these data points were coming from. After reviewing the tag template code, I verified that Tealium wasn't automatically scraping any parameters from the DOM or the customer's data layer, so I went searching through Meta's documentation to see if I could find any answers. Lo and behold, I discovered Meta has two ways of sending advanced matching params: manual and automatic. Automatic matching is exclusively controlled through Meta Ads Manager, and when enabled, scrapes the DOM for additional information from form fields on the page and automatically sends this through the Meta Pixel. Once I informed Uber of this, they promptly disabled that setting and found that the correct parameters were now passing through their Tealium tag after re-testing. Even though this ultimately wasn't a Tealium issue, I was happy to help this customer and benefited from Meta's golden standard of thorough documentation.
+
+<br />
+
+## When would you choose to use Edge Functions, Serverless Functions, or Edge Middleware with Vercel?
+
+1. Edge Functions: If you need a lightweight, cost-effective option and don't require the full set of Node.js APIs. They have low latency thanks to global distribution across the Edge Network.
+2. Serverless Functions: Powered by Node.js, these functions are intended for computationally intense workloads and offer access to all Node.js APIs (at the cost of a longer boot time).
+3. Edge Middleware: For when you need to execute code before a request is processed on a site, allowing you to modify the response and provide personalization to statically generated content.
+
+<br />
+
+## Imagine a customer writes in requesting help with a build issue on a framework or technology that you've not seen before. How would you begin troubleshooting this and what questions would you ask the customer to understand the situation better?
+
+-- I would start by asking the customer for more information. What steps are they taking to encounter this issue? Specifically, what error message(s) are they seeing? What tools or services are they using to build their application? Is anyone else able to reproduce the problem, or is this local to the reporting user? When was the last time they were able to successfully build? What changes have they made since they were last able to build? Once the customer has answered those questions (or while I’m awaiting a response), I would search for documentation on the framework / technology in question and see if I could gain any insight or discover any potential fixes.
+
+<br />
+
+## The customer from question 5 replies to your response with the following: “I’m so frustrated. I’ve been trying to make this work for hours and I just can’t figure it out. It must be a platform issue so just fix it for me instead of asking me questions.” Please write a follow-up reply to the customer.
+
+-- “Hi customer.firstName, I completely understand your frustration and assure you that we’re here to help. While I can’t fix the issue on your behalf, we might be able to tackle this problem a little more quickly together on a call. If you’d like to schedule some time for us to review this together, please use this link to book a slot on my calendar. Any additional information that you’re able to provide on the issue prior to our meeting would be much appreciated.”
+
+<br />
+
+## A customer writes in to the Helpdesk asking "How do I do a redirect from the /blog path to https://example.com?" Please write a reply to the customer. Feel free to add any information about your decision making process after the reply.
+
+-- “Hi customer.firstName, I would recommend reviewing our documentation on redirects, which can be found here: https://nextjs.org/docs/app/api-reference/next-config-js/redirects. You can specify the URL you're wanting to redirect to on a given path in the 'destination' key of the next.config.js file, which should be configured in the root of your project directory. Here is some additional documentation on next.config.js should you wish to review this as well: https://nextjs.org/docs/pages/api-reference/next-config-js. Please let me know if you have any additional questions or concerns that I can address on this topic."
+
+<br />
+
+## A customer is creating a site and would like their project not to be indexed by search engines. Please write a reply to the customer. Feel free to add any information about your decision making process after the reply.
+
+-- Shoot! I ran out of time and wasn't able to get to this question. (Though I think the answer might have something to do with the Sitemap?)
+
+<br />
+
+## What do you think is one of the most common problems which customers ask Vercel for help with? How would you help customers to overcome common problems, short-term and long-term?
+
+-- Shoot! I ran out of time and wasn't able to get to this question.
+
+<br />
+
+## How could we improve or alter this familiarisation exercise?
+
+-- Shoot! I ran out of time and wasn't able to get to this question.
